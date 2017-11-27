@@ -1,1 +1,1 @@
-export const API_URL = environment.NODE_ENV === 'production' ? 'http://swapi.co/api' : 'http://localhost:3000';
+export const API_URL = process.env.NODE_ENV === 'development' ? 'http://localhost:3000': 'http://swapi.co/api';
