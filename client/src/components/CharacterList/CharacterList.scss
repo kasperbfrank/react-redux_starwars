@@ -1,0 +1,23 @@
+@import '../../styles/colors.scss';
+
+.character-list {
+  > ul {
+    list-style: none;
+    padding: 0
+  }
+
+  &__item {
+    padding: 5px;
+    margin-bottom: 3px;
+    border: 1px solid $clouds;
+    border-radius: 3px;
+    transition: transform .1s ease-in;
+
+    &:hover { border-color: $light-blue; }
+
+    &.selected {
+      border-color: $turquoise;
+      transform: translateX(5px);
+    }
+  }
+}

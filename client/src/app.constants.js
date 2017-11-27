@@ -1,0 +1,1 @@
+export const API_URL = environment.NODE_ENV === 'production' ? 'http://swapi.co/api' : 'http://localhost:3000';
