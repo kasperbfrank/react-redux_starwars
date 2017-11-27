@@ -1,12 +1,14 @@
 {
-  "name": "react-redux_starwars_api",
+  "name": "react-redux_starwars",
   "version": "1.0.0",
-  "main": "index.js",
+  "author": "Kasper Bruus Frank <kasperbfrank@gmail.com>",
   "license": "MIT",
   "scripts": {
     "build": "webpack",
-    "start:prod": "webpack-dev-server --inline --port 80",
-    "serve": "webpack-dev-server --hot --inline --content-base ./src"
+    "start:prod": "webpack-dev-server --inline --host 0.0.0.0 --port 80",
+    "serve": "webpack-dev-server --hot --inline --content-base ./src --host 0.0.0.0",
+    "docker:build-prod": "docker build -t react-starwars-prod-img .",
+    "docker:run-prod": "docker run --name react-starwars-prod-app -p 80:80 react-starwars-prod-img"
   },
   "dependencies": {
     "react": "^16.0.0",
