@@ -5,11 +5,8 @@
   "license": "MIT",
   "scripts": {
     "build": "webpack",
-    "start:prod": "webpack-dev-server --inline --host 0.0.0.0 --port 80",
-    "serve": "webpack-dev-server --hot --inline --content-base ./src --host 0.0.0.0",
-    "docker:run-prod": "docker-compose up",
-    "docker:run-dev" : "docker-compose build && docker-compose -f dev.docker-compose.yml up",
-    "docker:run-full-dev": "docker-compose -f ../api/docker-compose.yml up && yarn docker:run-dev"
+    "start:prod": "webpack-dev-server --inline --port 80",
+    "serve": "webpack-dev-server --hot --inline --content-base ./src"
   },
   "dependencies": {
     "react": "^16.0.0",
