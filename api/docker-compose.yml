@@ -1,0 +1,16 @@
+version: "3"
+services:
+  api:
+    build: .
+    image: starwars-dev-api-img
+    container_name: starwars-dev-api
+    ports:
+      - "3000:3000"
+    depends_on:
+      - db
+
+  db:
+    image: mongo
+    container_name: starwars-db
+    volumes:
+      - ~/data:/data/db
