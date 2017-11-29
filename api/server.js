@@ -11,8 +11,6 @@ mongoose.connect('mongodb://db/StarWarsDb', {
   useMongoClient: true
 });
 
-console.log('process', process.env);
-
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
